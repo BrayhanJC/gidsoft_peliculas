@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Acceso desde la barra superior -->
+        <menuitem name="Abc" id="abc_menu" sequence="15" />
+        <menuitem name="Administrativos" id="abc_administrativos_menu"  parent="abc_menu" />  
+    </data>
+</openerp>

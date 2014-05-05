@@ -2,7 +2,7 @@
 
 from osv import osv,fields
 
-class director(osv.Models):
+class director(osv.Model):
 	_name='gidsoft.peliculas.director'
 
 	cbo_sexo=[

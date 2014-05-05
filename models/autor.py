@@ -2,7 +2,7 @@
 
 from osv import osv, fields
 
-class autor(osv.Models):
+class autor(osv.Model):
 	_name='gidsoft.peliculas.autor'
 	_rec_name='nom_autor'
 

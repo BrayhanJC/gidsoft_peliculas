@@ -2,7 +2,7 @@
 
 from osv import osv, fields
 
-class genero():
+class genero(osv.Model):
 	_name='gidsoft.peliculas.genero'
 	_columns={
 		'cod_genero':fields.char('Codigo Pelicula', required=True, size=3),
