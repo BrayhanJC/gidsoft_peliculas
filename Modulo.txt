@@ -1,0 +1,5 @@
+Modulo
+	Directores: identificacion nombres apellidos edad sexo pais fecha_nacimiento
+	Generos: codigo descripcion
+	Peliculas: codigo año sinopsis fotografia relacion_director
+	Escritor identificacion nombres apellidos edad sexo pais fecha_nacimiento relacion_pelicula
