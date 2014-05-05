@@ -4,9 +4,7 @@ from osv import osv,fields
 
 class pelicula(osv.Models):
 	_name= 'gidsoft.peliculas.pelicula'
-
 	_rec_name='nombre_pelicula'
-	_rec_name='ano_estreno'
 
 	_columns={
 		'cod_pelicula':fields.char('Codigo Pelicula', required=True size=4),

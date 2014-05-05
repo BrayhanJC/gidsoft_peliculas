@@ -5,7 +5,6 @@ from osv import osv, fields
 class autor(osv.Models):
 	_name='gidsoft.peliculas.autor'
 	_rec_name='nom_autor'
-	_rec_name='ape_autor'
 
 	cbo_sexo=[
 		('m', 'Masculino'),
