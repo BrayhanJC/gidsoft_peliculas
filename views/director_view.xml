@@ -22,7 +22,7 @@
 						<field name="identificacion_director"/>
 						<field name="name"/>
 						<field name="ape_director"/>
-						<field name="fecha_nacimiento"/>
+						<field name="fecha_nacimiento" on_change="onchange_calcular_edad(fecha_nacimiento)"/>
 					</group>
 					<group colspan="1" col="1">
 						<field name="edad"/>
