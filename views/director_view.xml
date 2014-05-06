@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Definicion Elementos de Busqueda-->
+		<record id="director_view_search" model="ir.ui.view">
+			<field name="name">director_view_search</field>
+			<field name="model">gidsoft.peliculas.director</field>
+			<field name="arch" type="xml">
+				<search string="Buscar Por: ">
+					<field name="ape_director"/>
+					<field name="name"/>
+				</search>
+			</field>
+		</record>
+		<!-- Definicion Vista Formulario -->
+		<record id="director_view_form" model="ir.ui.view">
+			<field name="name">director_view_form</field>
+			<field name="model">gidsoft.peliculas.director</field>
+			<field name="arch" type="xml">
+				<form string="Registro Director">
+					<field name="identificacion_director"/>
+					<field name="name"/>
+					<field name="ape_director"/>
+					<field name="fecha_nacimiento"/>
+					<field name="edad"/>
+					<field name="sexo"/>
+					<field name="pais"/>
+				</form>
+			</field>
+		</record>
+
+
+		<!-- Definicio Vista Arbol (Lista) -->
+		<record id="director_view_tree" model="ir.ui.view">
+			<field name="name">director_view_tree</field>
+			<field name="model">gidsoft.peliculas.director</field>
+			<field name="arch" type="xml">
+				<tree string="Directores Registrados">
+					<field name="identificacion_director"/>
+					<field name="name"/>
+					<field name="ape_director"/>
+					<field name="fecha_nacimiento"/>
+					<field name="edad"/>
+					<field name="sexo"/>
+					<field name="pais"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Definicion Comportamiento Vistas Modelo -->
+		<record id="action_director" model="ir.actions.act_window">
+			<field name="name">Directores</field>
+			<field name="res_model">gidsoft.peliculas.director</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<!-- Indicar submenu que mostrara vistas -->
+		<menuitem action="action_director" id="item_director" name="Sistema Directores" parent="menu_administrativo"/>
+	</data>
+</openerp>

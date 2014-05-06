@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Definicion Elementos de Busqueda-->
+		<record id="pelicula_view_search" model="ir.ui.view">
+			<field name="name">pelicula_view_search</field>
+			<field name="model">gidsoft.peliculas.pelicula</field>
+			<field name="arch" type="xml">
+				<search string="Buscar Por: ">
+					<field name="cod_pelicula"/>
+				</search>
+			</field>
+		</record>
+		<!-- Definicion Vista Formulario -->
+		<record id="pelicula_view_form" model="ir.ui.view">
+			<field name="name">pelicula_view_form</field>
+			<field name="model">gidsoft.peliculas.pelicula</field>
+			<field name="arch" type="xml">
+				<form string="Registro de Peliculas">
+					<field name="cod_pelicula"/>
+					<field name="nombre_pelicula"/>
+					<field name="sinopsis"/>
+					<field name="director_id"/>
+					<field name="autor_id"/>
+					<field name="genero_id"/>
+					<field name="ano_estreno"/>
+					<field name="imagen" widget="image"/>
+				</form>
+			</field>
+		</record>
+
+
+		<!-- Definicio Vista Arbol (Lista) -->
+		<record id="pelicula_view_tree" model="ir.ui.view">
+			<field name="name">pelicula_view_tree</field>
+			<field name="model">gidsoft.peliculas.pelicula</field>
+			<field name="arch" type="xml">
+				<tree string="Peliculas Registradas">
+					<field name="cod_pelicula"/>
+					<field name="nombre_pelicula"/>
+					<field name="director_id"/>
+					<field name="autor_id"/>
+					<field name="ano_estreno"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Definicion Comportamiento Vistas Modelo -->
+		<record id="action_pelicula" model="ir.actions.act_window">
+			<field name="name">Peliculas</field>
+			<field name="res_model">gidsoft.peliculas.pelicula</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<!-- Indicar submenu que mostrara vistas -->
+		<menuitem action="action_pelicula" id="item_pelicula" name="Sitema Peliculas" parent="menu_administrativo"/>
+	</data>
+</openerp>

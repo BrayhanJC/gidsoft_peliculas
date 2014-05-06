@@ -10,8 +10,9 @@ class pelicula(osv.Model):
 		'cod_pelicula':fields.char('Codigo Pelicula', required=True, size=4),
 		'nombre_pelicula':fields.char('Nombre Pelicula', size=42),
 		'sinopsis':fields.text('Sinopsis de la Pelicula'),
-		'director_id':fields.one2many('gidsoft.peliculas.director', 'name', 'Director'),
-		'autor_id':fields.one2many('gidsoft.peliculas.autor', 'nom_autor', 'Autor'),
+		'director_id':fields.many2one('gidsoft.peliculas.director', 'Director'),
+		'autor_id':fields.many2one('gidsoft.peliculas.autor', 'Autor'),
+		'genero_id':fields.many2one('gidsoft.peliculas.genero', 'Genero'),
 		'ano_estreno':fields.date('Año de Estreno'),
 		'imagen':fields.binary('Imagen', filtars='*.png, *.gif')
 	}

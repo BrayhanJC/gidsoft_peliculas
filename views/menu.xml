@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <!-- Acceso desde la barra superior -->
-        <menuitem name="Abc" id="abc_menu" sequence="15" />
-        <menuitem name="Administrativos" id="abc_administrativos_menu"  parent="abc_menu" />  
+        <menuitem name="Sistema de Cines" id="menu_sistema" sequence="1" />
+        <menuitem name="Administracion Cine" id="menu_administrativo"  parent="menu_sistema" />  
     </data>
 </openerp>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Definicion Elementos de Busqueda-->
+		<record id="autor_view_search" model="ir.ui.view">
+			<field name="name">autor_view_search</field>
+			<field name="model">gidsoft.peliculas.autor</field>
+			<field name="arch" type="xml">
+				<search string="Buscar Por: ">
+					<field name="nom_autor"/>
+					<field name="ape_autor"/>
+				</search>
+			</field>
+		</record>
+		<!-- Definicion Vista Formulario -->
+		<record id="autor_view_form" model="ir.ui.view">
+			<field name="name">autor_view_form</field>
+			<field name="model">gidsoft.peliculas.autor</field>
+			<field name="arch" type="xml">
+				<form string="Registro Autor">
+					<field name="identificacion_autor"/>
+					<field name="nom_autor"/>
+					<field name="ape_autor"/>
+					<field name="fecha_nacimiento"/>
+					<field name="edad"/>
+					<field name="sexo"/>
+					<field name="pais"/>
+				</form>
+			</field>
+		</record>
+
+
+		<!-- Definicio Vista Arbol (Lista) -->
+		<record id="autor_view_tree" model="ir.ui.view">
+			<field name="name">autor_view_tree</field>
+			<field name="model">gidsoft.peliculas.autor</field>
+			<field name="arch" type="xml">
+				<tree string="Autores Registrados">
+					<field name="identificacion_autor"/>
+					<field name="nom_autor"/>
+					<field name="ape_autor"/>
+					<field name="fecha_nacimiento"/>
+					<field name="edad"/>
+					<field name="sexo"/>
+					<field name="pais"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Definicion Comportamiento Vistas Modelo -->
+		<record id="action_autor" model="ir.actions.act_window">
+			<field name="name">Autores</field>
+			<field name="res_model">gidsoft.peliculas.autor</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<!-- Indicar submenu que mostrara vistas -->
+		<menuitem action="action_autor" id="item_autor" name="Sistema Autores" parent="menu_administrativo"/>
+	</data>
+</openerp>

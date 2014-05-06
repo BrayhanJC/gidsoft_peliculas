@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Definicion Elementos de Busqueda-->
+		<record id="genero_view_search" model="ir.ui.view">
+			<field name="name">genero_view_search</field>
+			<field name="model">gidsoft.peliculas.genero</field>
+			<field name="arch" type="xml">
+				<search string="Buscar Por: ">
+					<field name="cod_genero"/>
+					<field name="name"/>
+				</search>
+			</field>
+		</record>
+		<!-- Definicion Vista Formulario -->
+		<record id="genero_view_form" model="ir.ui.view">
+			<field name="name">genero_view_form</field>
+			<field name="model">gidsoft.peliculas.genero</field>
+			<field name="arch" type="xml">
+				<form string="Registro del Genero">
+					<field name="cod_genero"/>
+					<field name="name"/>
+				</form>
+			</field>
+		</record>
+
+
+		<!-- Definicio Vista Arbol (Lista) -->
+		<record id="genero_view_tree" model="ir.ui.view">
+			<field name="name">genero_view_tree</field>
+			<field name="model">gidsoft.peliculas.genero</field>
+			<field name="arch" type="xml">
+				<tree string="Generos Registrados">
+					<field name="cod_genero"/>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Definicion Comportamiento Vistas Modelo -->
+		<record id="action_genero" model="ir.actions.act_window">
+			<field name="name">Generos</field>
+			<field name="res_model">gidsoft.peliculas.genero</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<!-- Indicar submenu que mostrara vistas -->
+		<menuitem action="action_genero" id="item_genero" name="Generos Pelicula" parent="menu_administrativo"/>
+	</data>
+</openerp>
