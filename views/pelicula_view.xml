@@ -17,14 +17,18 @@
 			<field name="model">gidsoft.peliculas.pelicula</field>
 			<field name="arch" type="xml">
 				<form string="Registro de Peliculas">
-					<field name="cod_pelicula"/>
-					<field name="nombre_pelicula"/>
-					<field name="sinopsis"/>
-					<field name="director_id"/>
-					<field name="autor_id"/>
-					<field name="genero_id"/>
-					<field name="ano_estreno"/>
-					<field name="imagen" widget="image"/>
+					<group colspan="1" col="1">
+						<field name="cod_pelicula"/>
+						<field name="nombre_pelicula"/>
+						<field name="sinopsis"/>
+						<field name="director_id"/>
+						<field name="autor_id"/>
+						<field name="genero_id"/>
+						<field name="ano_estreno"/>
+					</group>
+					<group colspan="2" col="2">
+						<field name="imagen" widget="image"/>
+					</group>
 				</form>
 			</field>
 		</record>

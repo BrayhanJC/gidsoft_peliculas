@@ -18,13 +18,17 @@
 			<field name="model">gidsoft.peliculas.director</field>
 			<field name="arch" type="xml">
 				<form string="Registro Director">
-					<field name="identificacion_director"/>
-					<field name="name"/>
-					<field name="ape_director"/>
-					<field name="fecha_nacimiento"/>
-					<field name="edad"/>
-					<field name="sexo"/>
-					<field name="pais"/>
+					<group colspan="1" col="1">
+						<field name="identificacion_director"/>
+						<field name="name"/>
+						<field name="ape_director"/>
+						<field name="fecha_nacimiento"/>
+					</group>
+					<group colspan="1" col="1">
+						<field name="edad"/>
+						<field name="sexo"/>
+						<field name="pais"/>
+					</group>
 				</form>
 			</field>
 		</record>

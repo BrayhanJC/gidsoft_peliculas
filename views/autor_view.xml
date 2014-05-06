@@ -18,13 +18,17 @@
 			<field name="model">gidsoft.peliculas.autor</field>
 			<field name="arch" type="xml">
 				<form string="Registro Autor">
-					<field name="identificacion_autor"/>
-					<field name="nom_autor"/>
-					<field name="ape_autor"/>
-					<field name="fecha_nacimiento"/>
-					<field name="edad"/>
-					<field name="sexo"/>
-					<field name="pais"/>
+					<group colspan="1" col="1">
+						<field name="identificacion_autor"/>
+						<field name="nom_autor"/>
+						<field name="ape_autor"/>
+						<field name="fecha_nacimiento"/>
+					</group>
+					<group colspan="1" col="1">
+						<field name="edad"/>
+						<field name="sexo"/>
+						<field name="pais"/>
+					</group>
 				</form>
 			</field>
 		</record>
